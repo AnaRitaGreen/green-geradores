@@ -4,7 +4,7 @@ type ContentContainerProps = {
 
 export function ContentContainer(props: ContentContainerProps) {
   return (
-    <div className="teste">
+    <div className="content-container">
       {props.children}
     </div>
   )
