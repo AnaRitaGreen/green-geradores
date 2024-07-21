@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer>
       <ContentContainer>
-        <p>Green Geradores</p>
+        <span>Todos os direitos reservados - Green Geradores</span>
       </ContentContainer>
     </footer>
   )
