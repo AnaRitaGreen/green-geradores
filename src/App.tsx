@@ -13,3 +13,9 @@ export function App() {
     </>
   )
 }
+
+// FaTractor
+// FaGlassCheers
+// FaShoppingCart
+// FaCashRegister
+// PiSirenFill
