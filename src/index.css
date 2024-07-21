@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, select, textarea, button{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 .content-container {
   width: 100%;
   max-width: 1280px;
@@ -20,5 +30,33 @@ footer {
 footer span {
   color: #fff;
   font-size: 1rem;
+}
+
+.service-sectors{
+  width: 100%;
+  background-color: #026532;
+  text-align: center;
+  padding: 3rem 0 7rem;
+}
+
+.service-sectors h1{
+  color: #fff;
+}
+
+.sectors-cards-container{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.sector-card{
+  background-color: #eee;
+  color: #026532;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
