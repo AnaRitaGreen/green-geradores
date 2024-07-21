@@ -1,7 +1,11 @@
+import { ContentContainer } from "./ContentContainer"
+
 export function Footer() {
   return (
     <footer>
-      <p>Green Geradores</p>
+      <ContentContainer>
+        <p>Green Geradores</p>
+      </ContentContainer>
     </footer>
   )
 }
