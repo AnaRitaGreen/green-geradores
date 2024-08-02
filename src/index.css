@@ -44,16 +44,65 @@ footer span {
 }
 
 .sectors-cards-container{
-  display: flex;
+  display: grid;
   gap: 1rem;
-  justify-content: center;
   margin-top: 4rem;
+}
+
+/* Layout padrão: 5 colunas */
+.sectors-cards-container {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* Quando a largura da tela for menor que 800px: 3 colunas */
+@media (max-width: 800px) {
+  .sectors-cards-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .sector-card {
+    grid-column: span 2;
+  }
+
+  .sector-card:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+}
+
+/* Quando a largura da tela for menor que 600px: 2 colunas */
+@media (max-width: 600px) {
+  .sectors-cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sector-card {
+    grid-column: span 2;
+  }
+
+  .sector-card:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  .sector-card:nth-child(5) {
+    grid-column: 2 / span 2;
+  }
+}
+
+/* Quando a largura da tela for menor que 362px: 1 coluna */
+@media (max-width: 362px) {
+  .sectors-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sector-card:nth-child(5) {
+    grid-column: span 2;
+  }
 }
 
 .sector-card{
   background-color: #eee;
   color: #026532;
-  max-width: 200px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
