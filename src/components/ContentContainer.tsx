@@ -1,10 +1,8 @@
-type ContentContainerProps = {
-  children: React.ReactNode
-}
+type ContentContainerProps = {} & React.HTMLAttributes<HTMLDivElement>
 
 export function ContentContainer(props: ContentContainerProps) {
   return (
-    <div className="content-container">
+    <div {...props} className={props.className ? `content-container ${props.className}` : "content-container"}>
       {props.children}
     </div>
   )

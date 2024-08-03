@@ -4,9 +4,11 @@ import { FaCashRegister, FaGlassCheers, FaShoppingCart, FaTractor } from "react-
 import { SectorCard } from "./SectorCard";
 import { ContentContainer } from "./ContentContainer";
 
-export function ServiceSectors() {
+type ServiceSectorsProps = {} & React.HTMLAttributes<HTMLDivElement>
+
+export function ServiceSectors(props: ServiceSectorsProps) {
   return (
-    <div className="service-sectors">
+    <div {...props} className="service-sectors">
       <ContentContainer>
         <h1>Alguns setores que atendemos</h1>
         <div className="sectors-cards-container">

@@ -7,7 +7,7 @@ export function App() {
   return (
     <>
       <Hero />
-      <ServiceSectors />
+      <ServiceSectors id="service-sectors" />
       <Partners />
       <Footer />
     </>

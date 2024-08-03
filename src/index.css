@@ -21,15 +21,100 @@ body, input, select, textarea, button{
   padding: 0 1rem;
 }
 
-footer {
-  width: 100%;
-  background-color: #026532;
-  text-align: center;
+header {
+  background-color: #f4f4f4;
 }
 
-footer span {
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.header-container img {
+  max-width: 200px;
+}
+
+.header-container nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.header-container nav a {
+  font-weight: bold;
+  color: #026532;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.header-container nav a:hover {
+  border-bottom: 1px solid #026532;
+}
+
+.header-container nav button {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #026532;
   color: #fff;
-  font-size: 1rem;
+  font-weight: bold;
+}
+
+.header-container nav button:hover {
+  filter: brightness(0.9);
+  transition: filter 0.2s;
+}
+
+main {
+  padding: 0 1rem;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+main > img {
+  /* className=" -z-10  object-cover brightness-35" */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-container {
+  padding: 12rem 0;
+}
+
+.hero-container div {
+  width: 100%;
+  max-width: 600px;
+}
+
+.hero-container h1 {
+  color: #fff;
+  font-size: 3.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-container p {
+  color: #f4f4f4;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.hero-container button {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #026532;
+  color: #fff;
+  font-weight: bold;
 }
 
 .service-sectors{
@@ -100,12 +185,23 @@ footer span {
 }
 
 .sector-card{
-  background-color: #eee;
+  background-color: #f4f4f4;
   color: #026532;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  border-radius: 4px;
 }
 
+footer {
+  width: 100%;
+  background-color: #026532;
+  text-align: center;
+}
+
+footer span {
+  color: #fff;
+  font-size: 1rem;
+}
