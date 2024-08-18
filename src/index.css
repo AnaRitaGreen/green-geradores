@@ -66,7 +66,7 @@ header {
 
 .header-container nav button:hover {
   filter: brightness(0.9);
-  transition: filter 0.2s;
+  transition: filter 0.2s ease;
 }
 
 main {
@@ -109,12 +109,25 @@ main > img {
 
 .hero-container button {
   border: 0;
-  padding: 0.75rem 1.5rem;
+  padding: 1.5rem 3.5rem;
   border-radius: 8px;
   cursor: pointer;
   background-color: #026532;
   color: #fff;
   font-weight: bold;
+  font-size: 1.75rem;
+}
+
+.hero-container button:hover {
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .hero-container button {
+    padding: 1rem 2.5rem;
+    font-size: 1.25rem;
+  }
 }
 
 .service-sectors{
@@ -195,13 +208,222 @@ main > img {
   border-radius: 4px;
 }
 
+.partners {
+  width: 100%;
+  background-color: #e3e3e3;
+  text-align: center;
+  padding: 3rem 0 7rem;
+}
+
+.partners h1{
+  color: #026532;
+}
+
+.partners-container{
+  margin: 0 auto;
+  max-width: 600px;
+  display: grid;
+  gap: 5rem;
+  margin-top: 4rem;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.partners-container img {
+  width: 100%;
+  grid-column: span 2;
+}
+
+.partners-container img:nth-child(4), .partners-container img:nth-child(5) {
+  grid-column: span 3;
+}
+
+/* Quando a largura da tela for menor que 362px: 1 coluna */
+@media (max-width: 430px) {
+  .partners-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .partners-container img:nth-child(1), .partners-container img:nth-child(2), .partners-container img:nth-child(3) {
+    max-width: 30%;
+    margin: 0 auto;
+  }
+
+  .partners-container img:nth-child(4), .partners-container img:nth-child(5) {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .partners-container img, .partners-container img:nth-child(4), .partners-container img:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+.request-service {
+  background-color: #026532;
+  padding: 3rem 0;
+}
+
+.request-service-contact {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.request-service-contact strong {
+  font-size: 1.5rem;
+}
+
+.request-service-contact div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .request-service-contact strong {
+    font-size: 1rem;
+  }
+  
+  .request-service-contact div {
+    gap: 0.25rem;
+    font-size: 1rem;
+  }
+
+  .request-service-contact svg {
+    height: 19px;
+  }
+}
+
+@media (max-width: 430px) {
+  .request-service-contact {
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .request-service-contact strong {
+    font-size: 1.125rem;
+  }
+  
+  .request-service-contact div {
+    gap: 0.3rem;
+    font-size: 1.125rem;
+  }
+
+  .request-service-contact svg {
+    height: 22px;
+  }
+}
+
+.our-story {
+  background-color: #e3e3e3;
+  text-align: center;
+  padding: 3rem 0 7rem;
+}
+
+.our-story h1{
+  color: #026532;
+}
+
+.our-story-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.our-story-container img {
+  width: 100%;
+}
+
+.our-story-container p {
+  width: 100%;
+  text-align: justify;
+  text-indent: 2rem;
+  line-height: 1.75rem;
+  color: #333;
+}
+
+@media(max-width: 1120px) {
+  .our-story-container {
+    flex-direction: column;
+  }
+}
+
+@media(max-width: 768px) {
+  .our-story-container p {
+    line-height: 1.5rem;
+  }
+}
+
 footer {
   width: 100%;
   background-color: #026532;
-  text-align: center;
 }
 
 footer span {
   color: #fff;
   font-size: 1rem;
+}
+
+.footer-contact-container {
+  background-color: #ddd;
+}
+
+.footer-contact-container-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.footer-contact-container-content img {
+  width: 100%;
+  max-width: 100px;
+}
+
+.footer-contacts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.footer-social-media-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.footer-social-media-container span {
+  font-size: 1.125rem;
+}
+
+@media(max-width: 768px) {
+  .footer-social-media-container span {
+    font-size: 1rem;
+  }
+}
+
+.footer-social-media-icons-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer-social-media-icons-container svg {
+  color: white;
+  font-size: 32px;
+}
+
+@media(max-width: 600px) {
+  .footer-social-media-container span {
+    font-size: 0.875rem;
+  }
+
+  .footer-social-media-icons-container svg {
+    font-size: 24px;
+  }
 }

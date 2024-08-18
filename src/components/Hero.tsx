@@ -13,6 +13,7 @@ export function Hero() {
 
           <nav>
             <ScrollLink to="service-sectors" smooth>Setores</ScrollLink>
+            <ScrollLink to="partners" smooth>Parceiros</ScrollLink>
             <button>Orçamento</button>
           </nav>
         </ContentContainer>
